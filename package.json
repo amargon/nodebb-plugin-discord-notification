@@ -1,0 +1,32 @@
+{
+  "name": "nodebb-plugin-discord-notification",
+  "title": "Discord Notifications for NodeBB",
+  "version": "1.0.0",
+  "description": "Send notifications of new posts and topics via Discord webhook.",
+  "keywords": [
+    "discord",
+    "nodebb",
+    "plugin",
+    "webhook",
+    "notifications"
+  ],
+  "author": {
+    "name": "Amargon",
+    "url": "https://github.com/amargon/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amargon/nodebb-plugin-discord-notification"
+  },
+  "bugs": {
+    "url": "https://github.com/amargon/nodebb-plugin-discord-notification/issues"
+  },
+  "license": "MIT",
+  "main": "library.js",
+  "dependencies": {
+    "discord.js": "hydrabolt/discord.js"
+  },
+  "nbbpm": {
+    "compatibility": "^1.4.3"
+  }
+}
