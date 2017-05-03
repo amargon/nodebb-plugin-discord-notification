@@ -24,7 +24,7 @@
   "license": "MIT",
   "main": "library.js",
   "dependencies": {
-    "discord.js": "hydrabolt/discord.js"
+    "discord.js": "^11.1.0"
   },
   "nbbpm": {
     "compatibility": "^1.4.3"
