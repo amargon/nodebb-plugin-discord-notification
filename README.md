@@ -14,6 +14,12 @@ It’s like [NodeBB Slack](https://github.com/pichalite/nodebb-plugin-slack-exte
 3. Fill in **Webhook URL** field on the plugin settings page.
 4. Restart NodeBB.
 
-## Screenshot
+## Screenshots
+
+### Notification
+
+![ACP](screenshots/message.png)
+
+### ACP UI
 
 ![ACP](screenshots/ui.png)

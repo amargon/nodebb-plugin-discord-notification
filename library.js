@@ -59,7 +59,7 @@
 					Topics.getTopicFields(post.tid, ['title', 'slug'], callback);
 				},
 				category: function(callback) {
-					Categories.getCategoryFields(post.cid, ['name'], callback);
+					Categories.getCategoryFields(post.cid, ['name', 'bgColor'], callback);
 				}
 			}, function(err, data) {
 				var categories = JSON.parse(plugin.config['postCategories']);
@@ -74,6 +74,7 @@
 
 					// Make the rich embed:
 					var embed = new Discord.RichEmbed()
+						.setColor(data.category.bgColor)
 						.setURL(nconf.get('url') + '/topic/' + data.topic.slug)
 						.setTitle(data.category.name + ': ' + data.topic.title)
 						.setDescription(content)
