@@ -14,12 +14,12 @@
 
 	var plugin = {
 			config: {
-				'WebhookID': '',
-				'WebhookToken': '',
-				'MaxLength': '',
-				'PostCategories': '',
-				'TopicsOnly': ''
-			}
+				webhookURL: '',
+				maxLength: '',
+				postCategories: '',
+				topicsOnly: ''
+			},
+			regex: /https:\/\/discordapp.com\/api\/webhooks\/([0-9].+?)\/(.+?)$/
 		};
 
 	plugin.init = function(params, callback) {
@@ -37,14 +37,16 @@
 				}
 			}
 
-			hook = new Discord.WebhookClient(plugin.config['WebhookID'], plugin.config['WebhookToken']);
+			// Parse Webhook URL (1: ID, 2: Token)
+			var match = plugin.config['webhookURL'].match(plugin.regex);
+			hook = new Discord.WebhookClient(match[1], match[2]);
 		});
 
 		callback();
 	},
 
 	plugin.postSave = function(post) {
-		var topicsOnly = plugin.config['TopicsOnly'] || 'off';
+		var topicsOnly = plugin.config['topicsOnly'] || 'off';
 
 		if (topicsOnly === 'off' || (topicsOnly === 'on' && post.isMain)) {
 			var content = post.content;
@@ -60,11 +62,11 @@
 					Categories.getCategoryFields(post.cid, ['name'], callback);
 				}
 			}, function(err, data) {
-				var categories = JSON.parse(plugin.config['PostCategories']);
+				var categories = JSON.parse(plugin.config['postCategories']);
 
 				if (!categories || categories.indexOf(String(post.cid)) >= 0) {
 					// Trim long posts:
-					var maxContentLength = plugin.config['MaxLength'] || 1024;
+					var maxContentLength = plugin.config['maxLength'] || 1024;
 					if (content.length > maxContentLength) { content = content.substring(0, maxContentLength) + '...'; }
 
 					// Ensure absolute thumbnail URL:
