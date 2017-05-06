@@ -19,7 +19,7 @@
 				postCategories: '',
 				topicsOnly: ''
 			},
-			regex: /https:\/\/discordapp.com\/api\/webhooks\/([0-9].+?)\/(.+?)$/
+			regex: /https:\/\/discordapp\.com\/api\/webhooks\/([0-9]+?)\/(.+?)$/
 		};
 
 	plugin.init = function(params, callback) {
@@ -39,7 +39,10 @@
 
 			// Parse Webhook URL (1: ID, 2: Token)
 			var match = plugin.config['webhookURL'].match(plugin.regex);
-			hook = new Discord.WebhookClient(match[1], match[2]);
+
+			if (match) {
+				hook = new Discord.WebhookClient(match[1], match[2]);
+			}
 		});
 
 		callback();
@@ -81,7 +84,10 @@
 						.setFooter(data.user.username, thumbnail)
 						.setTimestamp();
 
-					hook.sendMessage('', {embeds: [embed]}).catch(console.error);
+					// Send notification:
+					if (hook) {
+						hook.sendMessage('', {embeds: [embed]}).catch(console.error);
+					}
 				}
 			});
 		}
