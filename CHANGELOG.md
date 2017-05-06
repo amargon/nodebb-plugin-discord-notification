@@ -4,6 +4,14 @@
 
 * Use current [NodeBB Settings Framework](https://nodebb.readthedocs.io/en/latest/plugins/settings.html).
 
+
+## [1.2.0] \(2017-05-07\)
+
+### Added
+
+* ACP UI language files.
+
+
 ## [1.1.1] \(2017-05-06\)
 
 ### Fixed
@@ -11,6 +19,7 @@
 * Webhook URL regular expression.
 
 * Don’t try to send notification if the webhook is not configured.
+
 
 ## [1.1.0] \(2017-05-06\)
 
@@ -31,7 +40,9 @@
 
 Requires latest [discord.js](https://github.com/hydrabolt/discord.js/) from GitHub (discord.js v11.0.0, latest in NPM, doesn’t handle webhooks well enough).
 
-[Unreleased]: https://github.com/amargon/city-of-doors/compare/v1.1.1...master
+
+[Unreleased]: https://github.com/amargon/city-of-doors/compare/v1.2.0...master
+[1.2.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.2.0
 [1.1.1]: https://github.com/amargon/city-of-doors/releases/tag/v1.1.1
 [1.1.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.1.0
 [1.0.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.0.0
