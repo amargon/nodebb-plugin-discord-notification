@@ -10,5 +10,6 @@
 		{ "hook": "action:post.save", "method": "postSave"}
 	],
 	"templates": "./public/templates",
+	"languages": "./languages",
 	"settingsRoute": "/admin/plugins/discord-notification"
 }
