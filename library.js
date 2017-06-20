@@ -4,6 +4,7 @@
 	var User = module.parent.require('./user');
 	var Topics = module.parent.require('./topics');
 	var Categories = module.parent.require('./categories');
+	var translator = module.parent.require('../public/src/modules/translator');
 	var meta = module.parent.require('./meta');
 	var nconf = module.parent.require('nconf');
 	var async = module.parent.require('async');
@@ -95,13 +96,15 @@
 	},
 
 	plugin.adminMenu = function(headers, callback) {
-		headers.plugins.push({
-			route : '/plugins/discord-notification',
-			icon  : 'fa-bell',
-			name  : 'Discord Notifications'
-		});
+		translator.translate('[[discord-notification:title]]', function(title) {
+			headers.plugins.push({
+				route : '/plugins/discord-notification',
+				icon  : 'fa-bell',
+				name  : title
+			});
 
-		callback(null, headers);
+			callback(null, headers);
+		});
 	};
 
 	module.exports = plugin;

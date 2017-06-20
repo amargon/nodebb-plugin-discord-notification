@@ -1,4 +1,5 @@
 {
+	"title": "Discord Notifications",
 	"webhook": "Webhook",
 	"webhook-url": "URL",
 	"webhook-help": "Copy an URL from the <em>Server Settings &rarr; Webhooks</em> page",
