@@ -75,7 +75,7 @@
 					if (content.length > maxContentLength) { content = content.substring(0, maxContentLength) + '...'; }
 
 					// Ensure absolute thumbnail URL:
-					var thumbnail = data.user.picture.match(/^\/\//) ? 'http:' + data.user.picture : data.user.picture;
+					var thumbnail = data.user.picture.match(/^\//) ? nconf.get('url') + data.user.picture : data.user.picture;
 
 					// Make the rich embed:
 					var embed = new Discord.RichEmbed()
