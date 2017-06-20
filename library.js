@@ -49,6 +49,7 @@
 	},
 
 	plugin.postSave = function(post) {
+		post = post.post;
 		var topicsOnly = plugin.config['topicsOnly'] || 'off';
 
 		if (topicsOnly === 'off' || (topicsOnly === 'on' && post.isMain)) {
