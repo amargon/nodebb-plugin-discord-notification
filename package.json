@@ -1,7 +1,7 @@
 {
   "name": "nodebb-plugin-discord-notification",
   "title": "Discord Notifications for NodeBB",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Send notifications of new posts and topics via Discord webhook.",
   "keywords": [
     "discord",

@@ -2,7 +2,16 @@
 
 ## [Unreleased]
 
+### Todo
+
 * Use current [NodeBB Settings Framework](https://nodebb.readthedocs.io/en/latest/plugins/settings.html).
+* Add debug logging.
+
+## [1.3.0] \(2017-06-20\)
+
+### Changed
+
+* Update for compatibility with NodeBB 1.5.x.
 
 
 ## [1.2.0] \(2017-05-07\)
@@ -41,7 +50,8 @@
 Requires latest [discord.js](https://github.com/hydrabolt/discord.js/) from GitHub (discord.js v11.0.0, latest in NPM, doesn’t handle webhooks well enough).
 
 
-[Unreleased]: https://github.com/amargon/city-of-doors/compare/v1.2.0...master
+[Unreleased]: https://github.com/amargon/city-of-doors/compare/v1.3.0...master
+[1.3.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.3.0
 [1.2.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.2.0
 [1.1.1]: https://github.com/amargon/city-of-doors/releases/tag/v1.1.1
 [1.1.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.1.0
