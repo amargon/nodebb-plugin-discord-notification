@@ -52,7 +52,7 @@
 	plugin.postSave = function(post) {
 		post = post.post;
 		var topicsOnly = plugin.config['topicsOnly'] || 'off';
-		var mentionEveryone = plugin.config['mentionEveryone'] || 'off';
+		var messageContent = plugin.config['messageContent'] || '';
 
 		if (topicsOnly === 'off' || (topicsOnly === 'on' && post.isMain)) {
 			var content = post.content;
@@ -89,11 +89,7 @@
 
 					// Send notification:
 					if (hook) {
-						if(mentionEveryone === 'on'){
-							hook.sendMessage('@everyone', {embeds: [embed]}).catch(console.error);
-						}else{
-							hook.sendMessage('', {embeds: [embed]}).catch(console.error);
-						}
+						hook.sendMessage(messageContent, {embeds: [embed]}).catch(console.error);
 					}
 				}
 			});
