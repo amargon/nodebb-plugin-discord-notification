@@ -3,7 +3,6 @@
 	"webhook": "Webhook",
 	"webhook-url": "URL",
 	"webhook-help": "Скопируйте URL со страницы <em>Настройки сервера &rarr; Webhook’и</em>",
-	"message": "Message Content",
 	"message-content": "Message",
 	"message-help": "",
 	"notification": "Уведомления",

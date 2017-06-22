@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-2 col-xs-12 settings-header">[[discord-notification:message]]</div>
+		<div class="col-sm-2 col-xs-12 settings-header">[[discord-notification:notification]]</div>
 		<div class="col-sm-10 col-xs-12">
 			<div class="form-group">
 				<label for="messageContent">[[discord-notification:message-content]]</label>
@@ -18,9 +18,6 @@
 				<p class="help-block">[[discord-notification:content-help]]</p>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-2 col-xs-12 settings-header">[[discord-notification:notification]]</div>
 		<div class="col-sm-10 col-xs-12">
 			<div class="form-group">
 				<label for="maxLength">[[discord-notification:notification-max-length]]</label>
