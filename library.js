@@ -90,7 +90,7 @@
 					// Send notification:
 					if (hook) {
 						if(mentionEveryone === 'on'){
-                            hook.sendMessage('@everyone', {embeds: [embed]}).catch(console.error);
+							hook.sendMessage('@everyone', {embeds: [embed]}).catch(console.error);
 						}else{
 							hook.sendMessage('', {embeds: [embed]}).catch(console.error);
 						}
