@@ -7,5 +7,6 @@
 	"notification-max-length": "Макс. длина сообщения",
 	"notification-max-length-help": "До 1024 символов",
 	"post-categories": "Рубрики",
-	"topics-only": "Уведомлять только о новых темах"
+	"topics-only": "Уведомлять только о новых темах",
+	"mention-everyone": "Mention @everyone"
 }

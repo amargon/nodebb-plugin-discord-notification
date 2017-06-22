@@ -28,6 +28,12 @@
 					<span class="mdl-switch__label">[[discord-notification:topics-only]]</span>
 				</label>
 			</div>
+			<div class="checkbox">
+				<label for="mentionEveryone" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+					<input type="checkbox" class="mdl-switch__input" id="mentionEveryone" name="mentionEveryone" />
+					<span class="mdl-switch__label">[[discord-notification:mention-everyone]]</span>
+				</label>
+			</div>
 		</div>
 	</div>
 </form>
