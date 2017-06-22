@@ -16,6 +16,7 @@
 	var plugin = {
 			config: {
 				webhookURL: '',
+				messageContent: '',
 				maxLength: '',
 				postCategories: '',
 				topicsOnly: ''
