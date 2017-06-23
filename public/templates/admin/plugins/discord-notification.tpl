@@ -9,15 +9,9 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-sm-2 col-xs-12 settings-header">[[discord-notification:notification]]</div>
-		<div class="col-sm-10 col-xs-12">
-			<div class="form-group">
-				<label for="messageContent">[[discord-notification:message-content]]</label>
-				<input type="text" class="form-control" id="messageContent" name="messageContent" />
-				<p class="help-block">[[discord-notification:content-help]]</p>
-			</div>
-		</div>
 		<div class="col-sm-10 col-xs-12">
 			<div class="form-group">
 				<label for="maxLength">[[discord-notification:notification-max-length]]</label>
@@ -34,10 +28,13 @@
 					<span class="mdl-switch__label">[[discord-notification:topics-only]]</span>
 				</label>
 			</div>
-
+			<div class="form-group">
+				<label for="messageContent">[[discord-notification:message]] <small>([[discord-notification:message-sidenote]])</small></label>
+				<textarea class="form-control" id="messageContent" name="messageContent" maxlength="512"></textarea>
+				<p class="help-block">[[discord-notification:message-help]]</p>
+			</div>
 		</div>
 	</div>
-
 </form>
 
 <button id="save" class="floating-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
