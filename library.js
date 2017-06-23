@@ -16,6 +16,7 @@
 	var plugin = {
 			config: {
 				webhookURL: '',
+				messageContent: '',
 				maxLength: '',
 				postCategories: '',
 				topicsOnly: ''
@@ -52,6 +53,7 @@
 	plugin.postSave = function(post) {
 		post = post.post;
 		var topicsOnly = plugin.config['topicsOnly'] || 'off';
+		var messageContent = plugin.config['messageContent'] || '';
 
 		if (topicsOnly === 'off' || (topicsOnly === 'on' && post.isMain)) {
 			var content = post.content;
@@ -88,7 +90,7 @@
 
 					// Send notification:
 					if (hook) {
-						hook.sendMessage('', {embeds: [embed]}).catch(console.error);
+						hook.sendMessage(messageContent, {embeds: [embed]}).catch(console.error);
 					}
 				}
 			});

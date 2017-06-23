@@ -28,6 +28,11 @@
 					<span class="mdl-switch__label">[[discord-notification:topics-only]]</span>
 				</label>
 			</div>
+			<div class="form-group">
+				<label for="messageContent">[[discord-notification:message]] <small>([[discord-notification:message-sidenote]])</small></label>
+				<textarea class="form-control" id="messageContent" name="messageContent" maxlength="512"></textarea>
+				<p class="help-block">[[discord-notification:message-help]]</p>
+			</div>
 		</div>
 	</div>
 </form>
