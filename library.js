@@ -12,14 +12,15 @@
 	var Discord = require('discord.js');
 
 	var hook = null;
+	var forumURL = nconf.get('url');
 
 	var plugin = {
 			config: {
 				webhookURL: '',
-				messageContent: '',
 				maxLength: '',
 				postCategories: '',
-				topicsOnly: ''
+				topicsOnly: '',
+				messageContent: ''
 			},
 			regex: /https:\/\/discordapp\.com\/api\/webhooks\/([0-9]+?)\/(.+?)$/
 		};
@@ -53,7 +54,6 @@
 	plugin.postSave = function(post) {
 		post = post.post;
 		var topicsOnly = plugin.config['topicsOnly'] || 'off';
-		var messageContent = plugin.config['messageContent'] || '';
 
 		if (topicsOnly === 'off' || (topicsOnly === 'on' && post.isMain)) {
 			var content = post.content;
@@ -77,12 +77,15 @@
 					if (content.length > maxQuoteLength) { content = content.substring(0, maxQuoteLength) + '...'; }
 
 					// Ensure absolute thumbnail URL:
-					var thumbnail = data.user.picture.match(/^\//) ? nconf.get('url') + data.user.picture : data.user.picture;
+					var thumbnail = data.user.picture.match(/^\//) ? forumURL + data.user.picture : data.user.picture;
+
+					// Add custom message:
+					var messageContent = plugin.config['messageContent'] || '';
 
 					// Make the rich embed:
 					var embed = new Discord.RichEmbed()
 						.setColor(data.category.bgColor)
-						.setURL(nconf.get('url') + '/topic/' + data.topic.slug)
+						.setURL(forumURL + '/topic/' + data.topic.slug)
 						.setTitle(data.category.name + ': ' + data.topic.title)
 						.setDescription(content)
 						.setFooter(data.user.username, thumbnail)
