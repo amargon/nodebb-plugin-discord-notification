@@ -73,8 +73,8 @@
 
 				if (!categories || categories.indexOf(String(post.cid)) >= 0) {
 					// Trim long posts:
-					var maxContentLength = plugin.config['maxLength'] || 1024;
-					if (content.length > maxContentLength) { content = content.substring(0, maxContentLength) + '...'; }
+					var maxQuoteLength = plugin.config['maxLength'] || 1024;
+					if (content.length > maxQuoteLength) { content = content.substring(0, maxQuoteLength) + '...'; }
 
 					// Ensure absolute thumbnail URL:
 					var thumbnail = data.user.picture.match(/^\//) ? nconf.get('url') + data.user.picture : data.user.picture;
