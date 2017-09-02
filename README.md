@@ -1,6 +1,6 @@
 # Discord Notifications for NodeBB
 
-[![npm](https://img.shields.io/npm/v/nodebb-plugin-discord-notification.svg)](https://www.npmjs.com/package/nodebb-plugin-discord-notification) [![npm downloads](https://img.shields.io/npm/dt/nodebb-plugin-discord-notification.svg)](https://www.npmjs.com/package/nodebb-plugin-discord-notification)
+[![npm](https://img.shields.io/npm/v/nodebb-plugin-discord-notification.svg)](https://www.npmjs.com/package/nodebb-plugin-discord-notification) [![npm downloads](https://img.shields.io/npm/dt/nodebb-plugin-discord-notification.svg)](https://www.npmjs.com/package/nodebb-plugin-discord-notification) ![NodeBB Compatibility](https://packages.nodebb.org/api/v1/plugins/nodebb-plugin-discord-notification/compatibility.png)
 
 Send notifications of new posts and topics via [Discord](https://discordapp.com/) webhook.
 
