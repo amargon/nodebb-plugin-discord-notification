@@ -76,8 +76,14 @@
 					var maxQuoteLength = plugin.config['maxLength'] || 1024;
 					if (content.length > maxQuoteLength) { content = content.substring(0, maxQuoteLength) + '...'; }
 
-					// Ensure absolute thumbnail URL:
-					var thumbnail = data.user.picture.match(/^\//) ? forumURL + data.user.picture : data.user.picture;
+					// Ensure absolute thumbnail URL if an avatar exists:
+					var thumbnail = null;
+
+					if (data.user.picture && data.user.picture.match(/^\//)) {
+						thumbnail = forumURL + data.user.picture;
+					} else if (data.user.picture) {
+						thumbnail = data.user.picture;
+					}
 
 					// Add custom message:
 					var messageContent = plugin.config['messageContent'] || '';
