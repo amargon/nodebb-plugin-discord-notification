@@ -22,7 +22,7 @@
 				topicsOnly: '',
 				messageContent: ''
 			},
-			regex: /https:\/\/discordapp\.com\/api\/webhooks\/([0-9]+?)\/(.+?)$/
+			regex: /https:\/\/discord(?:app)?\.com\/api\/webhooks\/([0-9]+?)\/(.+?)$/
 		};
 
 	plugin.init = function(params, callback) {
@@ -89,7 +89,7 @@
 					var messageContent = plugin.config['messageContent'] || '';
 
 					// Make the rich embed:
-					var embed = new Discord.RichEmbed()
+					var embed = new Discord.MessageEmbed()
 						.setColor(data.category.bgColor)
 						.setURL(forumURL + '/topic/' + data.topic.slug)
 						.setTitle(data.category.name + ': ' + data.topic.title)
@@ -99,7 +99,7 @@
 
 					// Send notification:
 					if (hook) {
-						hook.sendMessage(messageContent, {embeds: [embed]}).catch(console.error);
+						hook.send(messageContent, {embeds: [embed]}).catch(console.error);
 					}
 				}
 			});
