@@ -2,7 +2,7 @@
 	"title": "Discord Notifications",
 	"webhook": "Webhook",
 	"webhook-url": "URL",
-	"webhook-help": "Copy an URL from the <em>Server Settings &rarr; Webhooks</em> page",
+	"webhook-help": "Copy an URL from the <em>Server Settings &rarr; Integrations &rarr; Webhooks</em> page",
 	"notification": "Notifications",
 	"notification-max-length": "Maximum Quote Length",
 	"notification-max-length-help": "Up to 1024 characters",

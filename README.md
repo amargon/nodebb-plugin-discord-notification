@@ -9,7 +9,7 @@ It’s like [NodeBB Slack](https://github.com/pichalite/nodebb-plugin-slack-exte
 ## Configuration
 
 1. Install the plugin and activate it.
-2. Create a Discord webhook (Server Settings &rarr; Webhooks).  
+2. Create a Discord webhook (Server Settings &rarr; Integrations).  
     You’ll get an URL like `https://discord.com/api/webhooks/<Webhook ID>/<Webhook Token>`.
 3. Fill in **Webhook URL** field on the plugin settings page.
 4. Restart NodeBB.
