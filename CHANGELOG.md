@@ -5,7 +5,25 @@
 ### Todo
 
 * Use current [NodeBB Settings Framework](https://nodebb.readthedocs.io/en/latest/plugins/settings.html).
+
 * Add debug logging.
+
+* Add an option to send test notifications.
+
+
+## [1.5.0] \(2020-10-24\)
+
+### Changed
+
+* Update Discord URLs and regex as needed to follow Discord API changes ([#10]).
+
+* Replace deprecated `module.parent.require` (as in NodeBB 1.11.x and up).
+
+### Fixed
+
+* Don’t try to embed user avatar if no avatar is uploaded.
+
+* Outdated references to Discord UI.
 
 
 ## [1.4.0] \(2017-06-24\)
@@ -69,7 +87,8 @@
 Requires latest [discord.js](https://github.com/hydrabolt/discord.js/) from GitHub (discord.js v11.0.0, latest in NPM, doesn’t handle webhooks well enough).
 
 
-[Unreleased]: https://github.com/amargon/city-of-doors/compare/v1.4.0...master
+[Unreleased]: https://github.com/amargon/city-of-doors/compare/v1.5.0...master
+[1.5.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.5.0
 [1.4.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.4.0
 [1.3.1]: https://github.com/amargon/city-of-doors/releases/tag/v1.3.1
 [1.3.0]: https://github.com/amargon/city-of-doors/releases/tag/v1.3.0
@@ -82,3 +101,4 @@ Requires latest [discord.js](https://github.com/hydrabolt/discord.js/) from GitH
 [#1]: https://github.com/amargon/nodebb-plugin-discord-notification/issues/1
 [#4]: https://github.com/amargon/nodebb-plugin-discord-notification/issues/4
 [#6]: https://github.com/amargon/nodebb-plugin-discord-notification/pull/6
+[#10]: https://github.com/amargon/nodebb-plugin-discord-notification/pull/10
