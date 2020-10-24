@@ -26,6 +26,17 @@ Use `@here` or `@everyone` as usual or type `<@UserID>` to mention a member, `<@
 
 To get the IDs, enable Developer Mode (Discord App Settings &rarr; Appearance), right click a user or a channel and select *Copy ID*. The other way is to add a backslash to mentions in the chat (i.e `\@User`, `\@Role` or `\#Channel`).
 
+## Support
+
+This plugin is under **minimal maintenance**.
+
+It was made for a forum I manage and published as-is for the benefit of the community. As long as that forum exists I might add simple bugfixes or compatibility updates if necessary, but anything more time-consuming than a couple of hours a month is just out of my hands.
+
+All the unclear bug reports (you know, all these “It doesn’t work” ones without any notes on how to reproduce the issue) will be closed without comment.
+
+**Pull requests are highly welcome and appreciated.**  
+I might miss notifications from GitHub, so if I haven’t replied in a week or so, feel free to ping me.
+
 ## Screenshots
 
 ### Notification
