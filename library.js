@@ -106,15 +106,15 @@
 		}
 	},
 
-	plugin.adminMenu = function(headers, callback) {
+	plugin.addAdminMenu = function(header, callback) {
 		translator.translate('[[discord-notification:title]]', function(title) {
-			headers.plugins.push({
+			header.plugins.push({
 				route : '/plugins/discord-notification',
 				icon  : 'fa-bell',
 				name  : title
 			});
 
-			callback(null, headers);
+			callback(null, header);
 		});
 	};
 

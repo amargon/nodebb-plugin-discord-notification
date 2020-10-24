@@ -6,7 +6,7 @@
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:admin.header.build", "method": "adminMenu" },
+		{ "hook": "filter:admin.header.build", "method": "addAdminMenu" },
 		{ "hook": "action:post.save", "method": "postSave"}
 	],
 	"templates": "./public/templates",
