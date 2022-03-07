@@ -4,7 +4,7 @@
 	var User = require.main.require('./src/user');
 	var Topics = require.main.require('./src/topics');
 	var Categories = require.main.require('./src/categories');
-	var translator = require.main.require('./public/src/modules/translator');
+	var translator = require.main.require('./src/translator');
 	var meta = require.main.require('./src/meta');
 	var nconf = require.main.require('nconf');
 	var async = require.main.require('async');

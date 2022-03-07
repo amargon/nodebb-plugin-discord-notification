@@ -40,32 +40,3 @@
 <button id="save" class="floating-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
 	<i class="material-icons">save</i>
 </button>
-
-<script>
-	$(document).ready(function() {
-		socket.emit('categories.get', function(err, data) {
-			categories = data;
-			for (var i = 0; i < categories.length; ++i) {
-				$('#postCategories').append('<option value=' + categories[i].cid + '>' + categories[i].name + '</option>');
-			}
-		});
-	});
-
-	require(['settings'], function(Settings) {
-		Settings.load('discord-notification', $('.discord-notification-settings'));
-
-		$('#save').on('click', function() {
-			Settings.save('discord-notification', $('.discord-notification-settings'), function() {
-				app.alert({
-					type: 'success',
-					alert_id: 'discord-notification-saved',
-					title: 'Settings Saved',
-					message: 'Please reload your NodeBB to apply these settings',
-					clickfn: function() {
-						socket.emit('admin.reload');
-					}
-				});
-			});
-		});
-	});
-</script>

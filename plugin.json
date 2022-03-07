@@ -9,6 +9,9 @@
 		{ "hook": "filter:admin.header.build", "method": "addAdminMenu" },
 		{ "hook": "action:post.save", "method": "postSave"}
 	],
+	"modules": {
+		"../admin/plugins/discord-notification.js": "./public/src/admin.js"
+	},
 	"templates": "./public/templates",
 	"languages": "./languages",
 	"settingsRoute": "/admin/plugins/discord-notification"
