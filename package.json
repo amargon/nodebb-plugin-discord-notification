@@ -27,6 +27,6 @@
     "discord.js": "^12.4.1"
   },
   "nbbpm": {
-    "compatibility": "^1.11.0"
+    "compatibility": "^2.0.0"
   }
 }
